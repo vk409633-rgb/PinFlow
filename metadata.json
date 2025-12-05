@@ -1,0 +1,5 @@
+{
+  "name": "PinFlow - AI Batch Downloader",
+  "description": "A powerful, client-side Pinterest media downloader with batch processing capabilities and AI-powered content analysis.",
+  "requestFramePermissions": []
+}
