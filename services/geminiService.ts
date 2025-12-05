@@ -8,8 +8,8 @@ const MODEL_NAME = 'gemini-2.5-flash-lite-02-05';
 
 export const analyzeImage = async (imageBlob: Blob): Promise<{ title: string; caption: string; hashtags: string[] }> => {
   try {
-    const apiKey = process.env.API_KEY;
-    if (!apiKey) throw new Error("API Key not found");
+    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
+    if (!apiKey) throw new Error("API Key not found. Please set VITE_GEMINI_API_KEY in your .env.local file");
 
     const ai = new GoogleGenAI({ apiKey });
 
